@@ -12,14 +12,18 @@ This project simulates elementary particle collisions using C++ and ROOT. The ma
 
     Particle → Describes individual particles, including momentum components.
 
--Uses ROOT histograms for data visualization and statistical analysis.
+- Uses ROOT histograms for data visualization and statistical analysis.
 
 # Code Structure
 
 📌 ParticleType.h / .cxx → Defines stable particles.
+
 📌 ResonanceType.h / .cxx → Defines unstable resonances.
+
 📌 Particle.h / .cxx → Handles particle properties and decays.
+
 📌 main.cxx → Executes Monte Carlo event generation and fills histograms.
+
 📌 analysis.cxx → Performs statistical analysis and visualization of results.
 
 
