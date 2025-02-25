@@ -44,11 +44,3 @@ g++ analysis.cxx -o analysis
 Jaime Bruno
 Marta Aznar
 
-
-
-Angular and momentum distributions.
-
-Invariant mass distributions for πK pairs, identifying the K∗ resonance.
-
-Statistical fits are applied to validate results.
-
