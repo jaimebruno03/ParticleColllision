@@ -1,25 +1,20 @@
-📡 Simulating Particle Collisions with C++ and ROOT
+# Simulating Particle Collisions with C++ and ROOT
 
-📖 Description
+This project simulates elementary particle collisions using C++ and ROOT. The main goal is to generate and analyze collision events through Monte Carlo methods, focusing on extracting the resonance signal of the K∗ particle. ROOT framework need to be installed
 
-This project simulates elementary particle collisions using C++ and ROOT. The main goal is to generate and analyze collision events through Monte Carlo methods, focusing on extracting the resonance signal of the K∗ particle.
+- Simulates 105 collision events, generating around 120 particles per event.
+- Includes different particle types: π+, π−, K+, K−, P+, P−, K∗.
+- Implements three main C++ classes:
 
-🚀 Features
+    ParticleType → Defines stable particles (name, mass, charge).
 
-✅ Simulates 105 collision events, generating around 120 particles per event.
-✅ Includes different particle types: π+, π−, K+, K−, P+, P−, K∗.
-✅ Uses TRandom functions from ROOT for random number generation.
-✅ Implements three main C++ classes:
+    ResonanceType → Extends ParticleType for unstable resonances, adding width.
 
-🧩 ParticleType → Defines stable particles (name, mass, charge).
+    Particle → Describes individual particles, including momentum components.
 
-⚛️ ResonanceType → Extends ParticleType for unstable resonances, adding width.
+-Uses ROOT histograms for data visualization and statistical analysis.
 
-🎯 Particle → Describes individual particles, including momentum components.
-✅ Generates and analyzes kinematic distributions (momentum, angles, invariant mass).
-✅ Uses ROOT histograms for data visualization and statistical analysis.
-
-🏗️ Code Structure
+# Code Structure
 
 📌 ParticleType.h / .cxx → Defines stable particles.
 📌 ResonanceType.h / .cxx → Defines unstable resonances.
@@ -27,46 +22,24 @@ This project simulates elementary particle collisions using C++ and ROOT. The ma
 📌 main.cxx → Executes Monte Carlo event generation and fills histograms.
 📌 analysis.cxx → Performs statistical analysis and visualization of results.
 
-🛠️ Installation & Compilation
 
-🔹 Prerequisites
+# Compilation
 
-ROOT framework installed (installation guide).
+g++ main.cxx Particle.cxx ParticleType.cxx ResonanceType.cxx -o simulation 
 
-C++ compiler (e.g., g++).
+g++ analysis.cxx -o analysis 
 
-🏗️ Compilation
+# Running the Simulation
 
-# Compile the simulation code
-g++ main.cxx Particle.cxx ParticleType.cxx ResonanceType.cxx -o simulation `root-config --cflags --glibs`
-
-# Compile the analysis script
-g++ analysis.cxx -o analysis `root-config --cflags --glibs`
-
-▶️ Running the Simulation
-
-# Run the Monte Carlo simulation
 ./simulation
 
-# Run the analysis on generated data
 ./analysis
 
-📊 Results
+# Authors
 
-📌 The program generates ROOT histograms showing:
-✅ Particle type distributions.
-✅ Angular and momentum distributions.
-✅ Invariant mass distributions for πK pairs, identifying the K∗ resonance.
-📌 Statistical fits are applied to validate results.
+Jaime Bruno
+Marta Aznar
 
-👥 Authors
-
-👨‍🔬 Jaime Bruno
-👩‍🔬 Marta Aznar
-
-📜 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 
 Angular and momentum distributions.
